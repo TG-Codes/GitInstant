@@ -1,3 +1,4 @@
+/* ============ Responsiveness ===================== */
 * {
   box-sizing: border-box;
 }
@@ -102,6 +103,14 @@ h1{
     }
 }
 
+/* =============== Smaller Devices =============== */
+@media screen and (max-width: 320px) {
+    body{
+        background-color: rgb(43, 4, 43);
+        background-image: unset;
+    }
+}
+
 /* =============== Small Devices =============== */
 @media screen and (max-width: 480px) {
     .vectorImg{
@@ -115,6 +124,6 @@ h1{
         margin-bottom: 30px;
     }
     body{
-        background-size: 400%;
+        background-size: 450%;
     }
 }
