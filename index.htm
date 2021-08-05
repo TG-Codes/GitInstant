@@ -76,26 +76,6 @@
 
 </body>
 <script>
-    //Ajax search for repositories on github with authetication 
-    // function searchRepos(searchTerm) {
-    //     var searchUrl = "https://api.github.com/search/repositories?q=" + searchTerm;
-    //     var xhr = new XMLHttpRequest();
-    //     xhr.open("GET", searchUrl, true);
-    //     xhr.setRequestHeader("Authorization", "token " + "YOUR_TOKEN");
-    //     xhr.onreadystatechange = function() {
-    //         if (xhr.readyState == 4 && xhr.status == 200) {
-    //             var response = JSON.parse(xhr.responseText);
-    //             var results = response.items;
-    //             var html = "";
-    //             for (var i = 0; i < results.length; i++) {
-    //                 var result = results[i];
-    //                 var html = html + "<a href='" + result.html_url + "'>" + result.name + "</a><br>";
-    //             }
-    //             document.getElementById("searchResults").innerHTML = html;
-    //         }
-    //     };
-    //     xhr.send();
-    // }
     //Ajax search for repositories on github with authetication
     var search = document.getElementById("search");
     search.addEventListener("keyup", function () {
