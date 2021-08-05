@@ -71,9 +71,13 @@ h1{
 }
 
 
-
-
-
+/* ============= downloadArea==================== */
+#playButton{
+    margin-bottom: 30px; margin-left: 30px;
+}
+#appButton{
+    margin-left: 30px;
+}
 
 
 
@@ -87,8 +91,30 @@ h1{
 
 
 /* ############################### MEDIA QUERY ######################################## */
+
+/* =============== Small Devices =============== */
 @media screen and (max-width: 768px) {
     [class*="col-"] {
         width: 100%;
       }
+    body{
+        background-size: 300%;
+    }
+}
+
+/* =============== Small Devices =============== */
+@media screen and (max-width: 480px) {
+    .vectorImg{
+        height: 300px;
+    }
+    .searchArea{
+        margin-top: 10px;
+    }
+    #playButton{
+        margin-left: -14px;
+        margin-bottom: 30px;
+    }
+    body{
+        background-size: 400%;
+    }
 }
