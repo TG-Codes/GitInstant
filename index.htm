@@ -75,5 +75,27 @@
     </div>
 
 </body>
-
+<script>
+    //Ajax search for repositories on github
+    var search = document.getElementById("search");
+    search.addEventListener("keyup", function () {
+        var searchVal = this.value;
+        var url = "https://api.github.com/search/repositories?q=" + searchVal;
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var response = JSON.parse(xhr.responseText);
+                var results = response.items;
+                var html = "";
+                for (var i = 0; i < results.length; i++) {
+                    var item = results[i];
+                    var html = html + "<a href='" + item.html_url + "'>" + item.name + "</a><br>";
+                }  
+                document.getElementById("results").innerHTML = html;
+            }
+        };
+        xhr.send();
+    });
+</script>
 </html>
