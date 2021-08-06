@@ -83,7 +83,7 @@
         var url = "https://api.github.com/search/repositories?q=" + searchVal;
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
-        xhr.setRequestHeader("Authorization", "token " + "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");
+       // xhr.setRequestHeader("Authorization", "token " + "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");
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 var response = JSON.parse(xhr.responseText);
